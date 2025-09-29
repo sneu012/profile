@@ -1,5 +1,3 @@
-# Samip Neupane
-
 A modern, interactive portfolio website showcasing experience and technical expertise. Built with React, TypeScript.
 
 ## 🚀 Features
