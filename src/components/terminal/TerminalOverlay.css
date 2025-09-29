@@ -1,0 +1,375 @@
+/* Terminal Overlay Styles */
+.terminal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.terminal-overlay {
+  background: #0a0a0a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
+  height: 85%;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 0, 0.2),
+    inset 0 0 50px rgba(0, 0, 0, 0.8);
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Terminal Header */
+.terminal-header {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border-bottom: 1px solid #333;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+}
+
+.terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ff00;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  transition: all 0.2s ease;
+}
+
+.control-button.minimize {
+  background: #ffaa00;
+}
+
+.control-button.close {
+  background: #ff4444;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Terminal Content */
+.terminal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  position: relative;
+  min-height: 0; /* Important for flex shrinking */
+  overflow: hidden;
+}
+
+.terminal-output {
+  flex: 1;
+  padding: 8px 15px 10px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #00ff00;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.02) 0%, transparent 50%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 255, 0, 0.03) 1px,
+      rgba(0, 255, 0, 0.03) 2px
+    );
+  scroll-behavior: smooth;
+  will-change: scroll-position;
+  min-height: 0;
+  /* Removed max-height restriction to allow full history viewing */
+}
+
+.terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.terminal-output::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.output-line {
+  margin-bottom: 1px;
+  word-wrap: break-word;
+  word-break: break-word;
+  min-height: 18px;
+  display: block;
+  animation: fadeInLine 0.2s ease-out;
+  white-space: pre-wrap;
+}
+
+.output-line:empty {
+  min-height: 0;
+  margin-bottom: 0;
+}
+
+@keyframes fadeInLine {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prompt {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.output-text {
+  color: #cccccc;
+  margin-left: 0;
+}
+
+.error-text {
+  color: #ff4444;
+}
+
+.success-text {
+  color: #00ff88;
+}
+
+.warning-text {
+  color: #ffaa00;
+}
+
+.info-text {
+  color: #00aaff;
+}
+
+/* Command Categories */
+.command-category {
+  color: #ff6b35;
+  font-weight: bold;
+  margin: 4px 0 2px 0;
+  text-decoration: underline;
+  display: block;
+}
+
+.command-item {
+  margin-left: 20px;
+  margin-bottom: 1px;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.command-name {
+  color: #00ff88;
+  font-weight: bold;
+  min-width: 120px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.command-desc {
+  color: #cccccc;
+  display: inline;
+}
+
+/* Welcome Message */
+.welcome-message {
+  color: #00ff88;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.ascii-art {
+  color: #ff6b35;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 10px 0;
+  white-space: pre;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #00ff00;
+  margin-top: 5px;
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Terminal Input */
+.terminal-input-form {
+  border-top: 1px solid #333;
+  padding: 12px 15px;
+  background: #0a0a0a;
+  flex-shrink: 0; /* Prevent input from shrinking */
+  min-height: 50px;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-line .prompt {
+  color: #00ff00;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff00;
+  font-family: inherit;
+  font-size: 14px;
+  caret-color: #00ff00;
+}
+
+.terminal-input::placeholder {
+  color: #555;
+}
+
+/* Animations */
+.animate-terminal-in {
+  animation: terminalSlideIn 0.4s ease-out;
+}
+
+@keyframes terminalSlideIn {
+  from {
+    transform: scale(0.8) translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Matrix-like effect */
+.terminal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.terminal-output {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terminal-overlay {
+    width: 95%;
+    height: 85%;
+    max-height: 600px;
+    font-size: 12px;
+  }
+  
+  .terminal-output {
+    padding: 10px;
+    font-size: 12px;
+    /* Removed max-height restriction for mobile */
+  }
+  
+  .terminal-input {
+    font-size: 12px;
+  }
+  
+  .ascii-art {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  
+  .terminal-input-form {
+    padding: 8px 10px;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-overlay {
+    width: 98%;
+    height: 90%;
+  }
+  
+  .terminal-header {
+    padding: 6px 10px;
+  }
+  
+  .terminal-title {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,529 @@
+/* Gear System Styles */
+.gear-system {
+  position: absolute;
+  pointer-events: none;
+}
+
+.gear-system-large {
+  width: 200px;
+  height: 200px;
+}
+
+.gear-system-medium {
+  width: 120px;
+  height: 120px;
+}
+
+.gear-system-small {
+  width: 80px;
+  height: 80px;
+}
+
+.gear {
+  position: absolute;
+  border-radius: var(--radius-full);
+  background: 
+    radial-gradient(circle at 30% 30%, var(--color-border-light), var(--color-surface)),
+    conic-gradient(from 0deg, var(--color-border-light), var(--color-surface-dark), var(--color-surface), var(--color-surface-dark), var(--color-border-light));
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 10px var(--color-glow-primary);
+  will-change: transform;
+}
+
+.main-gear {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.gear-system-large .main-gear {
+  width: 100px;
+  height: 100px;
+}
+
+.gear-system-medium .main-gear {
+  width: 60px;
+  height: 60px;
+}
+
+.gear-system-small .main-gear {
+  width: 40px;
+  height: 40px;
+}
+
+.satellite-gear {
+  position: absolute;
+  z-index: 1;
+}
+
+.gear-system-large .satellite-gear {
+  width: 50px;
+  height: 50px;
+}
+
+.gear-system-medium .satellite-gear {
+  width: 30px;
+  height: 30px;
+}
+
+.gear-system-small .satellite-gear {
+  width: 20px;
+  height: 20px;
+}
+
+/* Satellite positioning for large gear system */
+.gear-system-large .satellite-1 {
+  top: 10px;
+  right: 30px;
+}
+
+.gear-system-large .satellite-2 {
+  bottom: 10px;
+  left: 30px;
+}
+
+.gear-system-large .satellite-3 {
+  top: 30px;
+  left: 10px;
+}
+
+/* Satellite positioning for medium gear system */
+.gear-system-medium .satellite-1 {
+  top: 15px;
+  right: 15px;
+}
+
+.gear-system-medium .satellite-2 {
+  bottom: 15px;
+  left: 15px;
+}
+
+/* Satellite positioning for small gear system */
+.gear-system-small .satellite-1 {
+  top: 10px;
+  right: 10px;
+}
+
+.gear-system-small .satellite-2 {
+  bottom: 10px;
+  left: 10px;
+}
+
+.gear-teeth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.tooth {
+  position: absolute;
+  background: linear-gradient(45deg, var(--color-border), var(--color-border-light));
+  transform-origin: 50% 50%;
+  border-radius: 1px;
+}
+
+.gear-system-large .main-gear .tooth {
+  width: 8px;
+  height: 12px;
+  top: -6px;
+  left: calc(50% - 4px);
+  border-radius: 2px;
+}
+
+.gear-system-medium .main-gear .tooth {
+  width: 6px;
+  height: 8px;
+  top: -4px;
+  left: calc(50% - 3px);
+  border-radius: 1px;
+}
+
+.gear-system-small .main-gear .tooth {
+  width: 4px;
+  height: 6px;
+  top: -3px;
+  left: calc(50% - 2px);
+  border-radius: 1px;
+}
+
+.satellite-gear .tooth {
+  width: 4px;
+  height: 6px;
+  top: -3px;
+  left: calc(50% - 2px);
+  border-radius: 1px;
+}
+
+.gear-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    radial-gradient(circle, var(--color-primary), var(--color-primary-dark)),
+    linear-gradient(45deg, var(--color-primary), var(--color-warning));
+  border-radius: var(--radius-full);
+  box-shadow: 
+    0 0 10px var(--color-glow-primary),
+    inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gear-system-large .main-gear .gear-center {
+  width: 20px;
+  height: 20px;
+}
+
+.gear-system-medium .main-gear .gear-center {
+  width: 12px;
+  height: 12px;
+}
+
+.gear-system-small .main-gear .gear-center {
+  width: 8px;
+  height: 8px;
+}
+
+.satellite-gear .gear-center {
+  width: 6px;
+  height: 6px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-glow-primary);
+  box-shadow: 
+    0 0 10px var(--color-glow-primary),
+    inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gear-inner-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  opacity: 0.6;
+}
+
+.gear-system-large .main-gear .gear-inner-ring {
+  width: 60px;
+  height: 60px;
+}
+
+.gear-system-medium .main-gear .gear-inner-ring {
+  width: 36px;
+  height: 36px;
+}
+
+.gear-system-small .main-gear .gear-inner-ring {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mechanical Elements */
+.mechanical-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.piston {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 6px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--color-border), var(--color-border-light));
+  border-radius: 3px;
+  box-shadow: 
+    0 0 5px var(--color-glow-primary),
+    inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.piston::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 10px;
+  height: 8px;
+  background: linear-gradient(45deg, var(--color-border-light), var(--color-border));
+  border-radius: 2px;
+}
+
+.connecting-rod {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-border-light), var(--color-surface-dark));
+  border-radius: 2px;
+  transform-origin: left center;
+  box-shadow: 0 0 3px var(--color-glow-primary);
+}
+
+.connecting-rod::before,
+.connecting-rod::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 5px var(--color-glow-primary);
+}
+
+.connecting-rod::before {
+  top: -1px;
+  left: -1px;
+}
+
+.connecting-rod::after {
+  top: -1px;
+  right: -1px;
+}
+
+.flywheel {
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  width: 25px;
+  height: 25px;
+  background: 
+    radial-gradient(circle, var(--color-surface-light), var(--color-surface-dark)),
+    conic-gradient(from 0deg, var(--color-border), var(--color-surface), var(--color-border));
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border-light);
+  box-shadow: 
+    0 0 8px var(--color-glow-primary),
+    inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Steam Effects */
+.steam-effects {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.steam-puff {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, var(--color-steam), transparent);
+  border-radius: var(--radius-full);
+  filter: blur(1px);
+}
+
+.steam-puff:nth-child(1) { left: 10%; }
+.steam-puff:nth-child(2) { left: 30%; }
+.steam-puff:nth-child(3) { left: 50%; }
+
+/* Pressure Gauges */
+.pressure-gauges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.mini-gauge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: 
+    radial-gradient(circle, var(--color-surface), var(--color-surface-dark)),
+    linear-gradient(45deg, var(--color-border), var(--color-surface));
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  box-shadow: 
+    0 0 5px var(--color-glow-secondary),
+    inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gauge-1 {
+  top: 15%;
+  left: 80%;
+}
+
+.gauge-2 {
+  bottom: 15%;
+  right: 80%;
+}
+
+.gauge-needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 8px;
+  background: var(--color-secondary);
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%);
+  box-shadow: 0 0 3px var(--color-glow-secondary);
+}
+
+/* Hover Effects */
+.gear-system:hover .gear {
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 20px var(--color-glow-primary);
+}
+
+.gear-system:hover .gear-center {
+  box-shadow: 
+    0 0 15px var(--color-glow-primary),
+    inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gear-system:hover .steam-puff {
+  opacity: 0.8 !important;
+}
+
+/* Animation Classes */
+.rotate-slow.clockwise {
+  animation: rotate 20s linear infinite;
+}
+
+.rotate-medium.clockwise {
+  animation: rotate 12s linear infinite;
+}
+
+.rotate-fast.clockwise {
+  animation: rotate 8s linear infinite;
+}
+
+.rotate-slow.counterclockwise {
+  animation: rotateReverse 20s linear infinite;
+}
+
+.rotate-medium.counterclockwise {
+  animation: rotateReverse 12s linear infinite;
+}
+
+.rotate-fast.counterclockwise {
+  animation: rotateReverse 8s linear infinite;
+}
+
+.animate-piston-slow {
+  animation: piston 4s ease-in-out infinite;
+}
+
+.animate-piston-medium {
+  animation: piston 3s ease-in-out infinite;
+}
+
+.animate-piston-fast {
+  animation: piston 2s ease-in-out infinite;
+}
+
+.animate-rod-slow {
+  animation: connecting-rod 8s ease-in-out infinite;
+}
+
+.animate-rod-medium {
+  animation: connecting-rod 6s ease-in-out infinite;
+}
+
+.animate-rod-fast {
+  animation: connecting-rod 4s ease-in-out infinite;
+}
+
+.animate-steam {
+  animation: steam 2s ease-out infinite;
+}
+
+.animate-needle-1 {
+  animation: needle-1 3s ease-in-out infinite;
+}
+
+.animate-needle-2 {
+  animation: needle-2 4s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes piston {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes connecting-rod {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+@keyframes needle-1 {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+}
+
+@keyframes needle-2 {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+/* Performance Optimization */
+.gear-system * {
+  will-change: transform;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gear-system-large {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gear-system-medium {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .gear-system-small {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gear-system-large {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .gear-system-medium {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .gear-system-small {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .gear-system * {
+    animation: none !important;
+  }
+}

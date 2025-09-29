@@ -1,0 +1,164 @@
+/* Design System - CSS Custom Properties */
+:root {
+  /* Colors - Mechanical Theme */
+  --color-primary: #ff6b35;
+  --color-primary-light: #ffaa00;
+  --color-primary-dark: #cc5429;
+  
+  --color-secondary: #00ccff;
+  --color-secondary-light: #00ffff;
+  --color-secondary-dark: #0099cc;
+  
+  --color-accent: #00ff88;
+  --color-accent-light: #44ffaa;
+  --color-accent-dark: #00cc66;
+  
+  --color-warning: #ffaa00;
+  --color-error: #ff5555;
+  --color-success: #00ff88;
+  
+  /* Neutral Colors */
+  --color-background: #0a0a0a;
+  --color-background-elevated: #1a1a1a;
+  --color-background-panel: #2a2a2a;
+  
+  --color-surface: #333333;
+  --color-surface-light: #444444;
+  --color-surface-dark: #222222;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #888888;
+  --color-text-disabled: #666666;
+  
+  --color-border: #444444;
+  --color-border-light: #555555;
+  --color-border-dark: #333333;
+  
+  /* Mechanical Effects */
+  --color-glow-primary: rgba(255, 107, 53, 0.3);
+  --color-glow-secondary: rgba(0, 204, 255, 0.3);
+  --color-glow-accent: rgba(0, 255, 136, 0.3);
+  
+  --color-steam: rgba(255, 255, 255, 0.4);
+  --color-metal: linear-gradient(145deg, #666666, #333333);
+  --color-brass: linear-gradient(145deg, #ffaa00, #cc8800);
+  
+  /* Typography */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'Fira Code', 'Courier New', monospace;
+  --font-family-display: 'Inter', sans-serif;
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Spacing */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-base: 0.5rem;  /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Mechanical Shadows */
+  --shadow-inset: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  --shadow-glow: 0 0 20px var(--color-glow-primary);
+  --shadow-panel: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* Breakpoints (for reference in JS) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-gear-slow: 20s;
+  --duration-gear-medium: 12s;
+  --duration-gear-fast: 8s;
+  
+  /* Grid & Layout */
+  --container-max-width: 1280px;
+  --sidebar-width: 320px;
+  --header-height: 80px;
+  --footer-height: 60px;
+}
+
+/* Dark mode adjustments (if needed) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Already optimized for dark theme */
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-gear-slow: 0ms;
+    --duration-gear-medium: 0ms;
+    --duration-gear-fast: 0ms;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
