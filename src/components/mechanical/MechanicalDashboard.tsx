@@ -84,9 +84,9 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
       default:
         return {
           title: 'Overview',
-          subtitle: 'What I\'ve been up to at RXNT',
-          description: '👋 Engineering Manager at RXNT, where I spend my days trying to keep healthcare systems running and my team caffeinated. 5+ years of learning that "it works on my machine" doesn\'t count in healthcare, and that HIPAA compliance is both a blessing and a curse. Still figuring things out, but having fun doing it! ☕',
-          metrics: metrics,
+          subtitle: 'What I\'ve been up to',
+          description: '👋 Engineering Manager, where I spend my days trying to keep systems running and my team motivated. Over eight years, I\'ve mastered the art of identifying which five-minute task will secretly take three weeks. Still figuring things out, but having fun doing it! ☕',
+          metrics: metrics.filter(m => ['system-design', 'people-compiler', 'rubber-duck-debugging', 'merge-conflicts', 'investigative-prowess', 'technical-debt', 'vibe-coder'].includes(m.id)),
           actions: [
             { icon: Briefcase, label: 'View Projects', primary: true },
             { icon: Code, label: 'Tech Stack', primary: false },
@@ -141,19 +141,12 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
         <div className="header-content">
           <div className="logo-section">
             <div className="engineer-logo">
-              <div className="logo-gear rotate-slow clockwise">
-                <div className="gear-teeth">
-                  {Array.from({ length: 12 }, (_, i) => (
-                    <div key={i} className="gear-tooth" style={{ transform: `rotate(${i * 30}deg)` }} />
-                  ))}
-                </div>
-                <div className="gear-center">
-                  <img 
-                    src="/profile.jpeg" 
-                    alt="Samip Neupane" 
-                    className="profile-image"
-                  />
-                </div>
+              <div className="profile-container">
+                <img 
+                  src="/profile.jpeg" 
+                  alt="Samip Neupane" 
+                  className="profile-image-circular"
+                />
               </div>
             </div>
             <div className="title-section">
@@ -224,7 +217,6 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
                 </div>
                 <div className="section-indicator">
                   <div className="indicator-dot animate-pulse-dot" />
-                  <span>Live Metrics</span>
                 </div>
               </div>
 
