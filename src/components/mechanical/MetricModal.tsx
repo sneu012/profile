@@ -17,7 +17,7 @@ export const MetricModal: React.FC<MetricModalProps> = ({
 }) => {
   if (!isOpen || !metric) return null;
 
-  const Icon = Icons[metric.icon as keyof typeof Icons];
+  const Icon = Icons[metric.icon as keyof typeof Icons] as React.ComponentType<{ size?: number; color?: string }>;
 
   return (
     <div className={`metric-detail-panel ${isOpen ? 'open' : ''}`}>
