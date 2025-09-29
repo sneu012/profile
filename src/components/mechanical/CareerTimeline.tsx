@@ -273,7 +273,7 @@ export const CareerTimeline: React.FC<CareerTimelineProps> = ({ isOpen, onClose 
               <div className="stat-item">
                 <Briefcase size={20} />
                 <div>
-                  <span className="stat-number">7+</span>
+                  <span className="stat-number">8+</span>
                   <span className="stat-label">Years Professional</span>
                 </div>
               </div>
