@@ -54,7 +54,7 @@ const METRICS: Metric[] = [
       title: 'Vibe Coder',
       icon: 'Music',
       color: '#8b5cf6',
-      description: 'Writing code that feels good and debugging with the perfect playlist',
+      description: 'Maybe??',
       category: 'technical'
     },
     // Career Progression Metrics
