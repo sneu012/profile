@@ -351,7 +351,6 @@ export const TERMINAL_COMMANDS: Record<string, TerminalCommand> = {
     <span class="warning-text">• 🧪 Experimentation - Setting up lab environments for new technologies</span>
 
     <div class="command-category">🎯 2026 SPECIFIC GOALS</div>
-    <span class="success-text">2025 Objectives:</span>
     <span class="info-text">• Hands on Experience with Kubernetes</span>
     <span class="info-text">• Mentor senior engineers into technical leadership roles</span>
 
