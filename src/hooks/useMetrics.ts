@@ -2,7 +2,7 @@ import type { Metric } from '../types';
 
 const METRICS: Metric[] = [
     {
-        id: 'system-design',
+        id: 'system-architect',
         title: 'System Architect',
         icon: 'Network',
         color: '#00ff88',
@@ -10,39 +10,7 @@ const METRICS: Metric[] = [
         category: 'technical'
     },
     {
-      id: 'people-compiler',
-      title: 'Human Load Balancer',
-      icon: 'Users',
-      color: '#ff6b35',
-      description: 'Distributing workload across the team without anyone crashing (usually)',
-      category: 'leadership'
-    },
-    {
-        id: 'rubber-duck-debugging',
-        title: 'Chaos Coordinator',
-        icon: 'Shuffle',
-        color: '#6b5b95',
-        description: 'Turning project pandemonium into organized success (most days)',
-        category: 'leadership'
-    },
-    {
-        id: 'merge-conflicts',
-        title: 'Conflict Resolver',
-        icon: 'GitMerge',
-        color: '#f7931e',
-        description: 'Resolving team disputes smoother than resolving Git conflicts',
-        category: 'leadership'
-    },  
-    {
-      id: 'investigative-prowess',
-      title: 'Data-Driven Decision Maker',
-      icon: 'BarChart3',
-      color: '#00a8cc',
-      description: 'Making decisions based on data, not just gut feelings 50% of the time',
-      category: 'leadership'
-    },
-    {
-      id: 'technical-debt',
+      id: 'automation-enthusiast',
       title: 'Automation Enthusiast',
       icon: 'Bot',
       color: '#ffcc02',
@@ -51,11 +19,43 @@ const METRICS: Metric[] = [
     },
     {
       id: 'vibe-coder',
-      title: 'Vibe Coder',
+      title: 'Vibe Coder 👀',
       icon: 'Music',
       color: '#8b5cf6',
       description: 'Maybe??',
       category: 'technical'
+    },
+    {
+      id: 'human-load-balancer',
+      title: 'Human Load Balancer',
+      icon: 'Users',
+      color: '#ff6b35',
+      description: 'Distributing workload across the team without anyone crashing (usually)',
+      category: 'leadership'
+    },
+    {
+        id: 'chaos-coordinator',
+        title: 'Chaos Coordinator',
+        icon: 'Shuffle',
+        color: '#6b5b95',
+        description: 'Turning project pandemonium into organized success (most days)',
+        category: 'leadership'
+    },
+    {
+        id: 'conflict-resolver',
+        title: 'Conflict Resolver',
+        icon: 'GitMerge',
+        color: '#f7931e',
+        description: 'Resolving team disputes smoother than resolving Git conflicts',
+        category: 'leadership'
+    },  
+    {
+      id: 'data-driven-decision-maker',
+      title: 'Data-Driven Decision Maker',
+      icon: 'BarChart3',
+      color: '#00a8cc',
+      description: 'Making decisions based on data, not just gut feelings 50% of the time',
+      category: 'leadership'
     },
     // Career Progression Metrics
     {
@@ -140,7 +140,7 @@ const METRICS: Metric[] = [
       category: 'technical'
     },
     {
-      id: 'git-version-control',
+      id: 'git',
       title: 'Git',
       icon: 'GitBranch',
       color: '#f05032',

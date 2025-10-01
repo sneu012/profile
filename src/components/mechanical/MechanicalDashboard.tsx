@@ -46,7 +46,7 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
           title: 'Overview',
           subtitle: 'What I\'ve been up to (with feelings involved)',
           description: '👋 Engineering Manager, where I spend my days trying to keep systems running and my team motivated. Over eight years, I\'ve mastered the art of identifying which five-minute task will secretly take three weeks. Still figuring things out, but having fun doing it! ☕',
-          metrics: metrics.filter(m => ['system-design', 'people-compiler', 'rubber-duck-debugging', 'merge-conflicts', 'investigative-prowess', 'technical-debt', 'vibe-coder'].includes(m.id)),
+          metrics: metrics.filter(m => ['system-architect', 'human-load-balancer', 'chaos-coordinator', 'conflict-resolver', 'data-driven-decision-maker', 'automation-enthusiast', 'vibe-coder'].includes(m.id)),
           actions: [
             { icon: Briefcase, label: 'View Projects', primary: true },
             { icon: Code, label: 'Tech Stack', primary: false },
@@ -77,7 +77,7 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
           title: 'Skills & Technologies',
           subtitle: 'My toolkit (constantly expanding like my coffee addiction)',
           description: '🛠️ Here are the main technologies and skills I work with daily. Each card shows my comfort level and experience with that particular area. Always learning something new!',
-          metrics: metrics.filter(m => ['csharp-dotnet', 'node-js', 'react', 'mssql', 'cosmos-db', 'azure-cloud', 'git-version-control', 'team-leadership', 'healthcare-domain'].includes(m.id)),
+          metrics: metrics.filter(m => ['csharp-dotnet', 'node-js', 'react', 'mssql', 'cosmos-db', 'azure-cloud', 'git', 'team-leadership', 'healthcare-domain'].includes(m.id)),
           actions: [
           ]
         };
@@ -86,7 +86,7 @@ export const MechanicalDashboard: React.FC<MechanicalDashboardProps> = ({
           title: 'Overview',
           subtitle: 'What I\'ve been up to',
           description: '👋 Engineering Manager, where I spend my days trying to keep systems running and my team motivated. Over eight years, I\'ve mastered the art of identifying which five-minute task will secretly take three weeks. Still figuring things out, but having fun doing it! ☕',
-          metrics: metrics.filter(m => ['system-design', 'people-compiler', 'rubber-duck-debugging', 'merge-conflicts', 'investigative-prowess', 'technical-debt', 'vibe-coder'].includes(m.id)),
+          metrics: metrics.filter(m => ['system-architect', 'human-load-balancer', 'chaos-coordinator', 'conflict-resolver', 'data-driven-decision-maker', 'automation-enthusiast', 'vibe-coder'].includes(m.id)),
           actions: [
             { icon: Briefcase, label: 'View Projects', primary: true },
             { icon: Code, label: 'Tech Stack', primary: false },
