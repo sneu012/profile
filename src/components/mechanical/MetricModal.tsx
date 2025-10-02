@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, TrendingUp, Clock, Target, Award } from 'lucide-react';
+import { X, TrendingUp, Target, Award } from 'lucide-react';
 import * as Icons from 'lucide-react';
 import type { Metric } from '../../types';
 import './MetricModal.css';
@@ -67,18 +67,6 @@ export const MetricModal: React.FC<MetricModalProps> = ({
               </div>
             </div>
           )}
-          {(metric.category === 'education' || metric.category === 'career') && (
-            <div className="detail-list">
-              <div className="detail-item">
-                <Award size={14} />
-                <span>Professional milestone</span>
-              </div>
-              <div className="detail-item">
-                <Clock size={14} />
-                <span>Key learning experience</span>
-              </div>
-            </div>
-          )}
           {metric.category === 'performance' && (
             <div className="detail-list">
               <div className="detail-item">
@@ -105,18 +93,6 @@ export const MetricModal: React.FC<MetricModalProps> = ({
           )}
         </div>
 
-        {/* Fun fact or tip */}
-        <div className="metric-tip">
-          <h4>💡 Pro Tip</h4>
-          <p>
-            {metric.category === 'leadership' && "Great leaders listen more than they speak!"}
-            {metric.category === 'technical' && "The best code is code that doesn't need to be written."}
-            {metric.category === 'education' && "Learning never stops - every project teaches something new."}
-            {metric.category === 'career' && "Each role builds on the previous one - it's all connected!"}
-            {metric.category === 'performance' && "Premature optimization is the root of all evil, but timely optimization is golden."}
-            {metric.category === 'innovation' && "Innovation happens when you're not afraid to break things (safely)."}
-          </p>
-        </div>
       </div>
     </div>
   );
